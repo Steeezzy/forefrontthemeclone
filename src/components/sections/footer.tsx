@@ -100,7 +100,7 @@ export default function Footer() {
             <div className="flex items-center gap-2">
               <Image 
                 src="https://framerusercontent.com/images/04vJJZ3D2ponPv6rzLBq6sf2PZU.svg"
-                alt="Landio Logo"
+                alt="Forefront Agent Logo"
                 width={103}
                 height={39}
                 className="brightness-100"
@@ -140,15 +140,15 @@ export default function Footer() {
         {/* Legal & Bottom Stuff */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 mt-16 pt-10 border-t border-white/5 border-dashed">
           <div className="text-[13px] text-[#666666]">
-            &copy; {new Date().getFullYear()} Landio Template
+            &copy; {new Date().getFullYear()} Forefront Agent Template
           </div>
           
           <div className="flex items-center gap-10 text-[13px] text-[#666666]">
             <div className="flex items-center gap-1">
               Made by <span className="text-[#999999]">Framebase</span>
             </div>
-            <a href="mailto:landio@support.com" className="hover:text-white transition-colors">
-              landio@support.com
+            <a href="mailto:forefront agent@support.com" className="hover:text-white transition-colors">
+              forefront agent@support.com
             </a>
           </div>
         </div>

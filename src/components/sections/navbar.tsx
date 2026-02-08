@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Star } from 'lucide-react';
 
 /**
- * Navbar component for Landio website clone.
+ * Navbar component for Forefront Agent website clone.
  * Features:
  * - Sticky blurred background
  * - Responsive container
@@ -15,13 +15,13 @@ const Navbar = () => {
     { name: 'Services', href: '#services' },
     { name: 'Process', href: '#process' },
     { name: 'Pricing', href: '#pricing' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Login', href: '/login' },
+    { name: 'Dashboard', href: '/panel/dashboard' },
   ];
 
   return (
     <div className="fixed top-0 left-0 right-0 z-[100] w-full flex justify-center">
-      <header 
+      <header
         className="w-full h-[64px] flex items-center justify-center border-b border-white/10"
         style={{
           backgroundColor: 'rgba(5, 5, 8, 0.75)',
@@ -30,22 +30,19 @@ const Navbar = () => {
         }}
       >
         <div className="container flex items-center justify-between h-full max-w-[1350px] px-10">
-          
+
           {/* Logo Section */}
           <div className="flex items-center">
-            <a href="/" className="block relative w-[103px] h-[39px]">
-              <Image 
-                src="https://framerusercontent.com/images/04vJJZ3D2ponPv6rzLBq6sf2PZU.svg" 
-                alt="Landio Logo" 
-                fill
-                priority
-                className="object-contain"
-              />
+            <a href="/" className="flex items-center gap-2 group">
+              <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center transition-transform group-hover:scale-105">
+                <div className="w-4 h-4 rounded-full bg-[#050508]" />
+              </div>
+              <span className="text-xl font-bold tracking-tight text-white">Forefront Agent</span>
             </a>
           </div>
 
           {/* Navigation Links */}
-          <nav 
+          <nav
             className="hidden md:flex items-center gap-1 px-3 py-1.5 rounded-full border border-white/5"
             style={{ backgroundColor: 'rgba(255, 255, 255, 0.03)' }}
           >
@@ -63,24 +60,24 @@ const Navbar = () => {
 
           {/* CTA Button */}
           <div className="flex items-center">
-            <a 
-              href="https://framer.link/D4dc7gs" 
+            <a
+              href="/login"
               className="flex items-center gap-2 px-4 py-2 rounded-lg border border-white/10 text-white transition-all hover:bg-white/5 group"
               style={{
                 backgroundColor: 'rgba(255, 255, 255, 0.05)',
                 boxShadow: 'inset 0 1px 1px rgba(255, 255, 255, 0.05)',
               }}
             >
-              <Star 
-                size={16} 
-                className="fill-white text-white transition-transform group-hover:scale-110" 
+              <Star
+                size={16}
+                className="fill-white text-white transition-transform group-hover:scale-110"
               />
               <span className="text-[14px] font-semibold leading-none">
-                Get Template
+                Get Started
               </span>
             </a>
           </div>
-          
+
         </div>
       </header>
 

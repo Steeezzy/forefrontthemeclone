@@ -5,7 +5,7 @@ import ErrorReporter from "@/components/ErrorReporter";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Landio - AI Automation Agency",
+  title: "Forefront Agent - AI Automation Agency",
   description: "Automate Smarter. Grow Faster. With AI.",
 };
 

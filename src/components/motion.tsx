@@ -3,7 +3,7 @@
 import React from "react";
 import { motion, type Variants } from "framer-motion";
 
-// Landio-style easing (smooth, slightly bouncy)
+// Forefront Agent-style easing (smooth, slightly bouncy)
 const EASE = [0.25, 0.1, 0.25, 1.0];
 const EASE_OUT = [0.0, 0.0, 0.2, 1.0];
 

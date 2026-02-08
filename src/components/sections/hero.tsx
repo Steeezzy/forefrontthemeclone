@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 export default function HeroSection() {
   return (
-    <section 
+    <section
       id="hero"
       className="relative w-full min-h-[900px] flex flex-col items-center justify-center overflow-hidden bg-[#050508]"
     >
@@ -20,9 +20,9 @@ export default function HeroSection() {
           playsInline
           className="w-full h-full object-cover opacity-60"
         >
-          <source 
-            src="https://framerusercontent.com/assets/1g8IkhtJmlWcC4zEYWKUmeGWzI.mp4" 
-            type="video/mp4" 
+          <source
+            src="https://framerusercontent.com/assets/1g8IkhtJmlWcC4zEYWKUmeGWzI.mp4"
+            type="video/mp4"
           />
         </video>
         {/* Overlay Gradients */}
@@ -31,32 +31,28 @@ export default function HeroSection() {
         <div className="absolute bottom-0 left-0 right-0 h-[200px] bg-gradient-to-t from-[#050508] to-transparent z-[15]" />
       </div>
 
-        {/* Main Content */}
-        <div className="relative z-20 w-full max-w-[1400px] mx-auto px-6 flex items-center justify-center">
-          
-          {/* Hero Content */}
-          <div className="flex-1 flex flex-col items-center text-center max-w-[800px]">
-          
+      {/* Main Content */}
+      <div className="relative z-20 w-full max-w-[1400px] mx-auto px-6 flex items-center justify-center">
+
+        {/* Hero Content */}
+        <div className="flex-1 flex flex-col items-center text-center max-w-[800px]">
+
           {/* Top Logo / Branding Marker */}
-          <motion.div 
+          <motion.div
             className="mb-12"
             initial={{ opacity: 0, scale: 0.8, y: 30 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
-             <div className="glass-card p-4 rounded-2xl flex items-center justify-center border-[rgba(255,255,255,0.08)] bg-[rgba(13,14,18,0.7)]">
-                <Image 
-                  src="https://framerusercontent.com/images/5BVUI56YoqDFZ1xvzbir5lf9sZA.svg" 
-                  alt="Brand Icon" 
-                  width={64} 
-                  height={64} 
-                  className="w-16 h-16"
-                />
-             </div>
+            <div className="glass-card p-4 rounded-2xl flex items-center justify-center border-[rgba(255,255,255,0.08)] bg-[rgba(13,14,18,0.7)]">
+              <div className="w-16 h-16 rounded-xl bg-white flex items-center justify-center">
+                <div className="w-8 h-8 rounded-full bg-[#050508]" />
+              </div>
+            </div>
           </motion.div>
 
           {/* Badge */}
-          <motion.div 
+          <motion.div
             className="mb-6 inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/5"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -72,7 +68,7 @@ export default function HeroSection() {
           </motion.div>
 
           {/* Headline */}
-          <motion.h1 
+          <motion.h1
             className="max-w-5xl mb-6 text-center leading-[1.1] tracking-[-0.02em] font-bold"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -82,7 +78,7 @@ export default function HeroSection() {
               Automate Smarter. Grow Faster.
             </span>
             <br />
-            <motion.span 
+            <motion.span
               className="font-serif-italic italic font-normal text-white inline-block"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -93,7 +89,7 @@ export default function HeroSection() {
           </motion.h1>
 
           {/* Subtext */}
-          <motion.p 
+          <motion.p
             className="max-w-2xl mb-12 text-lg md:text-xl text-[#999999] font-normal"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -103,45 +99,45 @@ export default function HeroSection() {
           </motion.p>
 
           {/* CTA Button */}
-          <motion.div 
+          <motion.div
             className="relative group"
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
           >
             <div className="absolute -inset-1 bg-gradient-to-r from-white/20 to-transparent rounded-full blur-xl opacity-0 group-hover:opacity-100 transition duration-500" />
-            
+
             <a
               href="https://framer.link/D4dc7gs"
               className="relative flex items-center justify-center gap-2 h-14 px-10 rounded-full bg-white text-[#050508] font-semibold text-base transition-transform duration-300 hover:scale-[1.02] shadow-[0_0_20px_rgba(255,255,255,0.15)] overflow-hidden"
             >
               <span>Book A Free Call</span>
-              <svg 
-                className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" 
-                viewBox="0 0 24 24" 
-                fill="none" 
-                stroke="currentColor" 
-                strokeWidth="2.5" 
-                strokeLinecap="round" 
+              <svg
+                className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
                 strokeLinejoin="round"
               >
                 <line x1="7" y1="17" x2="17" y2="7"></line>
                 <polyline points="7 7 17 7 17 17"></polyline>
               </svg>
-              
+
               <div className="absolute inset-0 border border-white/50 rounded-full pointer-events-none" />
             </a>
           </motion.div>
 
           {/* Social Links */}
-          <motion.div 
+          <motion.div
             className="mt-16 flex items-center gap-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1, ease: "easeOut" }}
           >
-            <a 
-              href="https://x.com/home" 
+            <a
+              href="https://x.com/home"
               className="text-white opacity-40 hover:opacity-100 transition-opacity"
               aria-label="Twitter"
             >
@@ -150,16 +146,16 @@ export default function HeroSection() {
               </svg>
             </a>
             <div className="w-[1px] h-4 bg-white/10" />
-            <a 
-              href="https://www.instagram.com/" 
+            <a
+              href="https://www.instagram.com/"
               className="text-white opacity-40 hover:opacity-100 transition-opacity"
               aria-label="Instagram"
             >
               <Instagram size={20} />
             </a>
             <div className="w-[1px] h-4 bg-white/10" />
-            <a 
-              href="https://www.facebook.com/" 
+            <a
+              href="https://www.facebook.com/"
               className="text-white opacity-40 hover:opacity-100 transition-opacity"
               aria-label="Facebook"
             >
@@ -168,32 +164,32 @@ export default function HeroSection() {
           </motion.div>
         </div>
 
-        </div>
+      </div>
 
       {/* Decorative Border & Bottom Glow */}
       <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-      
+
       {/* Scroll Down Arrow Indicator */}
-      <motion.div 
+      <motion.div
         className="absolute bottom-12 z-20"
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 1.2, ease: "easeOut" }}
       >
-        <motion.a 
-          href="#founder-note" 
+        <motion.a
+          href="#founder-note"
           className="text-white/30 hover:text-white transition-colors block"
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
         >
-          <svg 
-            width="24" 
-            height="24" 
-            viewBox="0 0 24 24" 
-            fill="none" 
-            stroke="currentColor" 
-            strokeWidth="2" 
-            strokeLinecap="round" 
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
             strokeLinejoin="round"
           >
             <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />

@@ -1,5 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Instrument+Serif:ital@0;1&display=swap');
 @import "tailwindcss";
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #0f1115;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
@@ -68,14 +87,17 @@
     from {
       height: 0;
     }
+
     to {
       height: var(--radix-accordion-content-height);
     }
   }
+
   @keyframes accordion-up {
     from {
       height: var(--radix-accordion-content-height);
     }
+
     to {
       height: 0;
     }
@@ -83,6 +105,7 @@
 }
 
 @layer base {
+
   *,
   ::after,
   ::before,
@@ -127,7 +150,12 @@
     line-height: 1.6;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-display);
     font-weight: 700;
     letter-spacing: -0.02em;
@@ -180,33 +208,36 @@
     0% {
       transform: translateY(0);
     }
+
     100% {
       transform: translateY(-50%);
     }
   }
 
-    .animate-scroll-up {
-      animation: scroll-up 15s linear infinite;
+  .animate-scroll-up {
+    animation: scroll-up 15s linear infinite;
+  }
+
+  @keyframes scroll-code {
+    0% {
+      transform: translateY(0);
     }
 
-    @keyframes scroll-code {
-      0% {
-        transform: translateY(0);
-      }
-      100% {
-        transform: translateY(-50%);
-      }
+    100% {
+      transform: translateY(-50%);
     }
+  }
 
-    .animate-scroll-code {
-      animation: scroll-code 20s linear infinite;
-    }
+  .animate-scroll-code {
+    animation: scroll-code 20s linear infinite;
+  }
 }
 
 @layer base {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
